@@ -1,33 +1,32 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+
+int mcd(int nmbr1, int nmbr2) 
+{
+    if(nmbr2 == 0) return nmbr1;
+    return mcd(nmbr2, nmbr1%nmbr2);
+}
+
 int main()
 {
     char reply = 'y';
+
+    int nmbr1, nmbr2;
+
     while (reply == 'y' || reply == 'Y')
     {
-        int dividendo, divisor, mod, mcd;
-    cout << "Ingrese el primer número\n";
-    cin >> dividendo;
-    cout << "Ingrese el segundo número\n";
-    cin >> dividendo;
-    mod = dividendo % divisor;
-    if(mod == 0){
-        cout << "\nEl MCD es: " << divisor;
-       }
-    while(!mod == 0)
-    {
-    dividendo = divisor;
-    divisor = mod;
-    mod = dividendo % divisor;
-     if(dividendo % divisor == 0){
-        cout << "\nEl MCD es: " << divisor;
-        break;
-     }
-    }
-    cout << "\n¿Desea realizar otra operación? (y/n)\n";
-    cin >> reply;
+         cout << "Ingrese el primer valor\n";
+        cin >> nmbr1;
+        cout << "Ingrese el segundo valor\n";
+        cin >> nmbr2;
+
+        cout << "El MCD de los números ingresados es: \n" << mcd(nmbr1, nmbr2) << "\n";
+
+        cout << "Desea realizar otra operacion? (y/n)";
+        cin >> reply;
     }
     
-    
+
+   
 } 
