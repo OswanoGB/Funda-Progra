@@ -34,8 +34,8 @@ void quantityUnderAbove (float heightArray[]) // Función para comparar las esta
         }
     }
 
-    cout << "La cantidad de alumnos que están por encima de la media de estatura son: " << counterAbove << "m\n";
-    cout << "La cantidad de alumnos que están por debajo de la media de estatura son: " << counterUnder << "m\n"; // Impresión de contadores
+    cout << "La cantidad de alumnos que están por encima de la media de estatura son: " << counterAbove << "\n";
+    cout << "La cantidad de alumnos que están por debajo de la media de estatura son: " << counterUnder << "\n"; // Impresión de contadores
     
 }
 
